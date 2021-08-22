@@ -7,13 +7,50 @@
 //
 
 #import "GGZAppDelegate.h"
+#import <ClangTraceLaurchMethods/GGZGeneralOrderFileTool.h>
+#import <AFNetworking/AFNetworkReachabilityManager.h>
+@interface GGZAppDelegate()
+@property (nonatomic, copy) void(^testCallBlock)(void);
+
+@end
 
 @implementation GGZAppDelegate
+void testCallCMethod(void);
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.testCallBlock = ^(void){
+        NSLog(@"testCallBlock");
+    };
+    for (NSInteger i = 0; i < 100; i++) {
+        [self callSomeMethods];
+    }
+    
+    [self start];
     return YES;
+}
+
+#pragma mark - Private Method
+- (void)callSomeMethods {
+    NSInteger i = 0;
+    while (i < 5) {
+        // call third lib method
+        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+        // call block
+        self.testCallBlock();
+        // call c method
+        testCallCMethod();
+        i++;
+    }
+}
+
+
+- (void)start {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [GGZGeneralOrderFileTool generateOrderFile];
+    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -44,3 +81,8 @@
 }
 
 @end
+
+
+void testCallCMethod(void) {
+    NSLog(@"testCallCMethod");
+}

@@ -1,0 +1,6 @@
+framework module Pods_ClangTraceLaurchMethods_Tests {
+  umbrella header "Pods-ClangTraceLaurchMethods_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

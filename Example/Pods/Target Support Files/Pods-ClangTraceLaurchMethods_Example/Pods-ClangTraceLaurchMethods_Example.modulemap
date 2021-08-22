@@ -1,0 +1,6 @@
+framework module Pods_ClangTraceLaurchMethods_Example {
+  umbrella header "Pods-ClangTraceLaurchMethods_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

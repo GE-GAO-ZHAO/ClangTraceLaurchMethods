@@ -1,0 +1,22 @@
+{
+  "name": "ClangTraceLaurchMethods",
+  "version": "0.1.0",
+  "summary": "A short description of ClangTraceLaurchMethods.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/葛高召/ClangTraceLaurchMethods",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "葛高召": "gegaozhao@xdfzx.com"
+  },
+  "source": {
+    "git": "https://github.com/葛高召/ClangTraceLaurchMethods.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ClangTraceLaurchMethods/Classes/Core/*"
+}
