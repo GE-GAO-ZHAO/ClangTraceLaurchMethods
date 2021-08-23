@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/葛高召/ClangTraceLaurchMethods'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '葛高召' => 'gegaozhao@xdfzx.com' }
+  s.author           = { '葛高召' => 'gegaozhao1126@gmail.com' }
   s.source           = { :git => 'https://github.com/葛高召/ClangTraceLaurchMethods.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
